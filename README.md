@@ -7,3 +7,7 @@ cp -r  keys/ netkeys ./data
 
 docker run -d --name xchain -v $PWD/data/blockchain://home/work/xuperunion/data/blockchain -v $PWD/data/keys://home/work/xuperunion/data/keys -v $PWD/data/netkeys://home/work/xuperunion/data/netkeys -v $PWD/conf:/home/work/xuperunion/conf -p 37101:37101 -p 47101:47101 -p 37200:37200 zfq17876911936/chaojigongshi-xuperchain-othernode:1.0-20201110-nofee
 
+docker run -d --name httpgw -p 8098:8098 zfq17876911936/chaojigongshi-chain-httpgw:1.0-20201110-nofee -gateway_endpoint ip:port
+
+curl http://localhost:8098/v1/get_block_by_height -d '{"bcname":"xuper", "height":10}'
+
