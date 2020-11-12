@@ -29,6 +29,8 @@ p2p:
   port: 47101
   #certPath: ./data/tls/1
   #serviceName: saas_test.server.com
+  bootNodes:
+    - "/ip4/192.168.40.136/tcp/47101/p2p/QmR47gxBT29HtSoQ5vuyPDEnvHRLoi9hdJzbxqn2Kfyqui"
   #bootNodes:
   #  - "/ip4/<ip>/tcp/<port>/p2p/<node_hash>" for p2pv2 or - "<ip>:<port>" for p2pv1
   #staticNodes:
